@@ -12,10 +12,13 @@ export const Quiz1 = ({question,nextStep,range}) => {
             <h1>{question.title}</h1>
         </div>
         <div className='answers'>
-            <ul>
+            <ul className='linkUl'>
                 {
                     question.answers.map((item,index) => (
-                        <li onClick={() => nextStep(index,question.correct)} key={index}>{item}</li>
+                        <li className='link' onClick={() => {
+                            nextStep(index,question.correct);
+                            
+                        }} key={index}>{item}</li>
                     ))
                 }
             </ul>

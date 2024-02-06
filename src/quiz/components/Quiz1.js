@@ -1,24 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const Quiz1 = ({question,nextStep,range}) => {
+    const letters = question.letters;
+
   return (
     <div className='container'>
-        <div className='range'>
-            <div className='range-inp'>
-                <div className='line' style={{width: `${range}%`}}></div>
-            </div>
-        </div>
         <div className='question'>
-            <h1>{question.title}</h1>
+            <img className='harc' src={question.title} alt="" />
         </div>
         <div className='answers'>
             <ul className='linkUl'>
                 {
                     question.answers.map((item,index) => (
-                        <li className='link' onClick={() => {
-                            nextStep(index,question.correct);
+                        <li className={question.hamar == 4 ? 'link hatuk' : 'link'} onClick={(tag) => {
+                            nextStep(tag.target,index,question.correct);
+                        }} key={index}>
+                            <div className={question.hamar == 4 ? 'div hatukDiv' : 'div'}>
+                            <img className='letter' src={letters[index]}/>
                             
-                        }} key={index}>{item}</li>
+                            {item}
+                            </div>
+                            
+                            </li>
                     ))
                 }
             </ul>

@@ -1,77 +1,46 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+import Letter1 from "../assets/images/letter1.svg"
+import Letter2 from "../assets/images/letter2.svg"
+import Letter3 from "../assets/images/letter3.svg"
+import Letter4 from "../assets/images/letter4.svg"
+
+import Harc1 from "../assets/images/harc1.png"
+import Harc2 from "../assets/images/harc2.png"
+import Harc3 from "../assets/images/harc3.png"
+import Harc4 from "../assets/images/harc4.png"
+import Harc5 from "../assets/images/harc5.png"
+
 
 const initialState = [
     {
-        title:'React is ...?',
-        answers:['framework','language','library'],
-        correct: 2,
-    },
-    {
-        title:'Redux is ...?',
-        answers:['a library for animation','a state management library','language'],
-        correct: 1,
-    },
-    {
-        title:'HTML is ... language?',
-        answers:['cascading','programming','markup'],
-        correct: 2,
-    },
-    {
-        title:'Which company developed React',
-        answers:['Facebook','Google','Microsoft'],
+        hamar: 1,
+        title: Harc1,
+        answers:['1996','1966','1989','1990'],
+        letters: [Letter1,Letter2,Letter3,Letter4],
         correct: 0,
     },
     {
-        title:'CSS is ... language?',
-        answers:['programming','cascading','markup'],
+        hamar: 2,
+        title: Harc2,
+        answers:['1','2','3','4'],
+        letters: [Letter1,Letter2,Letter3,Letter4],
         correct: 1,
     },
     {
-        title:'What is not the part of the OOP?',
-        answers:['interface','class','encapsualation'],
-        correct: 1, 
+        hamar: 3,
+        title: Harc3,
+        answers:['2009','2007','2019','2010'],
+        letters: [Letter1,Letter2,Letter3,Letter4],
+        correct: 2,
     },
     {
-        title:'What is the purpose of generic?',
-        answers:['Memmory Managment','Inheritance','For Optimization','One Time Use Type'],
-        correct: 3, 
+        hamar: 4,
+        title: Harc5,
+        answers:['HC Helpdesk','IT Helpdesk','Call HC','HC call center'],
+        letters: [Letter1,Letter2,Letter3,Letter4],
+        correct: 1,
     },
-    {
-        title:'What framework du we use for DB connection in C#?',
-        answers:['.Net Framework','ENTITY Framework Core','AngularJs'],
-        correct: 1, 
-    },
-    {
-        title:'Which one of those is not SQL language?',
-        answers:['mySQL','Postgree','Ruby'],
-        correct: 2, 
-    },
-    {
-        title:'Does function and procedure are the same in SQL?',
-        answers:['YES','NO'],
-        correct: 1, 
-    },
-    {
-        title:'Which one of those is not part of C language?',
-        answers:['F#','C++','JavaScript','B'],
-        correct: 2, 
-    },
-    {
-        title:'What is the purpose of OOP?',
-        answers:['Optimization','Style','Pattern'],
-        correct: 0, 
-    },
-    {
-        title:'Which one of those is a pattern?',
-        answers:['SOLID','OOP','Polymorphism'],
-        correct: 0, 
-    },
-    {
-        title:'How does REST(Rest api) opens?',
-        answers:['Reqsuest, Eject, Save, Test','Restart, Eject, Start, Text','Random, Ejection, Save, Tendence'],
-        correct: 0, 
-    }
 ]
 
 export const selectValue = (state) => state.quiz;
